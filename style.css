@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;0,700;1,600;1,700&display=swap');
 
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 :root {
     --scissor-light: hsl(40, 84%, 53%);
     --scissor-dark: hsl(39, 89%, 49%);
@@ -15,10 +21,54 @@
 }
 
 body {
+    font-family: 'Barlow Semi Condensed';
+    display: flex;
+    flex-direction: column;
     height: 100vh;
     width: 100vw;
     background-image: linear-gradient(var(--bg-light), var(--bg-dark));
     background-repeat: no-repeat;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--score-text);
+    border: solid 3px var(--header-outline);
+    border-radius: 6px;
+    margin: 1.5rem;
+    padding: 0.6rem;
+    height: 85px;
+}
+
+header img {
+    height: 70%;
+    margin-left: 0.5rem;
+}
+
+header .score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 3px;
+    width: 70px;
+    height: 100%;
+    line-height: 1.4rem;
+}
+
+header .score--text {
+    font-size: 9px;
+    font-weight: 700;
+    margin-top: 0.1rem;
+    letter-spacing: 0.1rem;
+}
+
+header #score--value {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--dark-text);
 }
 
 main {
