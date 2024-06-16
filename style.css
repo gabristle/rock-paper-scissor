@@ -104,14 +104,17 @@ main .option--border {
 }
 
 main #option--paper {
+    transition: ease;
     background-image: linear-gradient(var(--paper-light), var(--paper-dark)) ;
 }
 
 main #option--rock {
+    transition: ease;
     background-image: linear-gradient(var(--rock-light), var(--rock-dark)) ;
 }
 
 main #option--scissor {
+    transition: ease;
     background-image: linear-gradient(var(--scissor-light), var(--scissor-dark));
 }
 
@@ -159,7 +162,19 @@ main button:hover {
     top: 13%;
 }
 
-.modal--invisible {
+.invisible{
+    display: none; 
+}
+
+#option--scissor .invisible {
+    display: none;
+}
+
+#option--paper .invisible {
+    display: none;
+}
+
+#option--rock .invisible {
     display: none;
 }
 
@@ -178,6 +193,14 @@ main button:hover {
 #close--modal {
     position: absolute;
     bottom: 80px;
+}
+
+#match {
+    display: flex;
+    position: absolute;
+    top: 225px;
+    justify-content: space-between;
+    gap: 50px;
 }
 
 footer {
