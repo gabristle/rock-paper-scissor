@@ -77,9 +77,42 @@ main {
     align-items: center;
     flex-direction: column;
     height: 100vh;
+}
+
+main .main--triangle {
+    display: flex;
+    justify-content: space-between;
     background-image: url(images/bg-triangle.svg);
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200px;
+    width: 250px;
+    height: 225px;
 }
+
+main .option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+}
+
+main .option img {
+    height: 40px;
+}
+
+main #option--rock {
+    margin-top: 150px;
+}
+
+main #option--rock img {
+    height: 30px;
+}
+
+
 
 main button {
     font-family: 'Barlow Semi Condensed';
