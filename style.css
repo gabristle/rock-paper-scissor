@@ -154,6 +154,19 @@ main button:hover {
     color: var(--bg-dark);
 }
 
+.button--retry {
+    margin-top: -30px;
+    height: 40px;
+    width: 200px;
+    background-color: white;
+    color: var(--bg-dark);
+}
+
+.button--retry:hover {
+    color: white;
+    background-color: var(--bg-dark);
+}
+
 #rules--modal p {
     color: var(--bg-light);
     font-size: 28px;
@@ -201,6 +214,7 @@ main button:hover {
     flex-direction: column;
     top: 225px;
     justify-content: space-between;
+    align-items: center;
     gap: 50px;
     font-size: 52px;
     font-weight: 700;

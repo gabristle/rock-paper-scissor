@@ -21,6 +21,10 @@ const computerOption = document.getElementById('computer--option');
 const options = [scissor, paper, rock];
 const cpOption = options[Math.floor(Math.random() * options.length)];
 const result = document.getElementById('result');
+const match = document.getElementById('match');
+const btRetry = document.createElement('button');
+btRetry.innerHTML = 'PLAY AGAIN';
+btRetry.classList.add('button--retry');
 
 scissor.addEventListener('click', () => {
     triangle.style.backgroundImage = 'none';
@@ -42,6 +46,7 @@ scissor.addEventListener('click', () => {
     } else {
         result.textContent = 'YOU WIN';
     }
+    match.appendChild(btRetry);
 });
 
 paper.addEventListener('click', () => {
@@ -64,6 +69,7 @@ paper.addEventListener('click', () => {
     } else {
         result.textContent = 'YOU WIN';
     }
+    match.appendChild(btRetry);
 });
 
 rock.addEventListener('click', () => {
@@ -86,4 +92,9 @@ rock.addEventListener('click', () => {
     } else {
         result.textContent = 'YOU WIN';
     }
+    match.appendChild(btRetry);
+});
+
+btRetry.addEventListener('click', function() {
+    window.location.reload();
 });
