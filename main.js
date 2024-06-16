@@ -23,6 +23,9 @@ const cpOption = options[Math.floor(Math.random() * options.length)];
 const result = document.getElementById('result');
 const match = document.getElementById('match');
 const btRetry = document.createElement('button');
+const scoreValue = document.getElementById('score--value');
+let score = localStorage.getItem('score') ? Number(localStorage.getItem('score')) : 0;
+scoreValue.textContent = score;
 btRetry.innerHTML = 'PLAY AGAIN';
 btRetry.classList.add('button--retry');
 
@@ -41,10 +44,16 @@ scissor.addEventListener('click', () => {
     cpOption.classList.add('option--border');
     if(cpOption == rock) {
         result.textContent = 'YOU LOSE';
+        score = 0;
+        scoreValue.textContent = score;
+        localStorage.setItem('score', score);
     } else if (cpOption == scissor) {
         result.textContent = 'DRAW';
     } else {
         result.textContent = 'YOU WIN';
+        score++;
+        localStorage.setItem('score', score);
+        scoreValue.textContent = score;
     }
     match.appendChild(btRetry);
 });
@@ -64,10 +73,16 @@ paper.addEventListener('click', () => {
     cpOption.classList.add('option--border');
     if(cpOption == scissor) {
         result.textContent = 'YOU LOSE';
+        score = 0;
+        scoreValue.textContent = score;
+        localStorage.setItem('score', score);
     } else if (cpOption == paper) {
         result.textContent = 'DRAW';
     } else {
         result.textContent = 'YOU WIN';
+        score++;
+        localStorage.setItem('score', score);
+        scoreValue.textContent = score;
     }
     match.appendChild(btRetry);
 });
@@ -87,10 +102,16 @@ rock.addEventListener('click', () => {
     cpOption.classList.add('option--border');
     if(cpOption == paper) {
         result.textContent = 'YOU LOSE';
+        score = 0;
+        scoreValue.textContent = score;
+        localStorage.setItem('score', score);
     } else if (cpOption == rock) {
         result.textContent = 'DRAW';
     } else {
         result.textContent = 'YOU WIN';
+        score++;
+        localStorage.setItem('score', score);
+        scoreValue.textContent = score;
     }
     match.appendChild(btRetry);
 });
