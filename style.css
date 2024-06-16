@@ -198,9 +198,20 @@ main button:hover {
 #match {
     display: flex;
     position: absolute;
+    flex-direction: column;
     top: 225px;
     justify-content: space-between;
     gap: 50px;
+    font-size: 52px;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+}
+
+#match--options {
+    gap: 50px;
+    display: flex;
+    flex-direction: row;
 }
 
 footer {
