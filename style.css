@@ -151,8 +151,33 @@ main button:hover {
     color: var(--bg-dark);
 }
 
-.dialog-modal {
+#rules--modal p {
+    color: var(--bg-light);
+    font-size: 28px;
+    font-weight: 700;
+    position: absolute;
+    top: 13%;
+}
+
+.modal--invisible {
     display: none;
+}
+
+.modal--visible {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(244, 244, 244);
+}
+
+#close--modal {
+    position: absolute;
+    bottom: 80px;
 }
 
 footer {
